@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+type Person struct {
+	Name     string
+	lastName string
+	age      int8
+	email    string
+}
 
 func matrices() {
 	/*//Matrices --------------##
@@ -21,33 +26,58 @@ func matrices() {
 	fmt.Println(b)
 	fmt.Println(b[2][1])*/
 
-	//MAPS --------------##
-	colors := map[string]string{
-		"red":    "#FF0000",
-		"green":  "#00FF00",
-		"blue":   "#0000FF",
-		"yellow": "#FF00FF",
-	}
-	fmt.Println(colors)
-	fmt.Println(colors["red"])
+	/*
+		//MAPS --------------##
+		colors := map[string]string{
+			"red":    "#FF0000",
+			"green":  "#00FF00",
+			"blue":   "#0000FF",
+			"yellow": "#FF00FF",
+		}
+		fmt.Println(colors)
+		fmt.Println(colors["red"])
 
-	// agg value to map
-	colors["black"] = "#0000"
-	fmt.Println(colors)
+		// agg value to map
+		colors["black"] = "#0000"
+		fmt.Println(colors)
 
-	if value, ok := colors["gray"]; ok {
-		fmt.Println("The value is -> ", value)
-	} else {
-		fmt.Println("The value not found")
-	}
+		if value, ok := colors["gray"]; ok {
+			fmt.Println("The value is -> ", value)
+		} else {
+			fmt.Println("The value not found")
+		}
 
-	// delete value in the map
-	delete(colors, "red")
-	fmt.Println(colors)
+		// delete value in the map
+		delete(colors, "red")
+		fmt.Println(colors)
 
-	//iteration to map
-	for key, value := range colors {
-		fmt.Printf("The key is -> %v, The value is -> %v\n ", key, value)
-	}
+		//iteration to map
+		for key, value := range colors {
+			fmt.Printf("The key is -> %v, The value is -> %v\n ", key, value)
+		}
+	*/
+
+	/*
+		//STRUCTS --------------##
+		//method 1
+		var p Person
+		p.Name = "Tury"
+		p.lastName = "Rome"
+		p.age = 29
+		p.email = "tury@gmail.com"
+
+		//method 2
+		p := Person{
+			"Tury",
+			"Rome",
+			29,
+			"tury@gmail.com",
+		}
+
+		fmt.Println(p)
+		fmt.Println(p.Name)
+	*/
+
+	//POINTERS --------------##
 
 }
