@@ -1,10 +1,17 @@
 package main
 
+import "fmt"
+
 type Person struct {
 	Name     string
 	lastName string
 	age      int8
 	email    string
+}
+
+// esto es un metodo del struct person, y se le pasa como receptor p que es un puntero de tipo Person
+func (p *Person) sayHello() {
+	fmt.Println("Hello my name is -> " + p.Name)
 }
 
 func matrices() {
@@ -79,5 +86,27 @@ func matrices() {
 	*/
 
 	//POINTERS --------------##
+	var x int = 10
+	var y *int = &x // guarda le referencia de la memoria donde está x
 
+	fmt.Println(x)
+	edit(&x)
+	fmt.Println(y)
+	fmt.Println(x)
+
+	//exaple whit struct and method
+	per := Person{
+		"pepito",
+		"perez",
+		20,
+		"pepito@pepito.com",
+	}
+
+	per.sayHello() // de esta forma accedemos a los metodos de las structs
+
+}
+
+// POINTERS --------------##
+func edit(x *int) {
+	*x = 30 // accedemos a la reference en memoria a travez del puntero y le cambiamos su valor
 }
