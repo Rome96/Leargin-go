@@ -12,5 +12,6 @@ func main() {
 	fmt.Printf("hello I'm %v, age is %v\n", name, age)*/
 
 	//varAndTypeData()
-	conditionals()
+	//conditionals()
+	matrices()
 }

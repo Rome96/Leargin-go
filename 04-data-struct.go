@@ -1,0 +1,53 @@
+package main
+
+import "fmt"
+
+func matrices() {
+	/*//Matrices --------------##
+
+	var a = [...]int{10, 40, 59, 28}
+
+	//len nos da la cantidad de elementos dentro del array
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
+
+	for i, value := range a {
+		fmt.Printf("Indice => %d - value => %d\n", i, value)
+	}
+
+	//Matriz bidimencional
+	var b = [3][3]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	fmt.Println(b)
+	fmt.Println(b[2][1])*/
+
+	//MAPS --------------##
+	colors := map[string]string{
+		"red":    "#FF0000",
+		"green":  "#00FF00",
+		"blue":   "#0000FF",
+		"yellow": "#FF00FF",
+	}
+	fmt.Println(colors)
+	fmt.Println(colors["red"])
+
+	// agg value to map
+	colors["black"] = "#0000"
+	fmt.Println(colors)
+
+	if value, ok := colors["gray"]; ok {
+		fmt.Println("The value is -> ", value)
+	} else {
+		fmt.Println("The value not found")
+	}
+
+	// delete value in the map
+	delete(colors, "red")
+	fmt.Println(colors)
+
+	//iteration to map
+	for key, value := range colors {
+		fmt.Printf("The key is -> %v, The value is -> %v\n ", key, value)
+	}
+
+}
