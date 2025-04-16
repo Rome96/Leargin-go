@@ -13,5 +13,6 @@ func main() {
 
 	//varAndTypeData()
 	//conditionals()
-	matrices()
+	//matrices()
+	contacts()
 }
