@@ -14,5 +14,6 @@ func main() {
 	//varAndTypeData()
 	//conditionals()
 	//matrices()
-	contacts()
+	//contacts()
+	StructAndMethod()
 }

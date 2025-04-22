@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func contacts() {
+func Contacts() {
 	str := "123"
 	num, err := strconv.Atoi(str) // convert string to int
 	if err != nil {
