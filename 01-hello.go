@@ -16,5 +16,6 @@ func main() {
 	//matrices()
 	//contacts()
 	//StructAndMethod()
-	Concurrencia()
+	//Concurrencia()
+	Functions()
 }
