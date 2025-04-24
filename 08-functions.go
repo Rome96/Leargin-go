@@ -21,6 +21,9 @@ func Functions() {
 	}
 	greetings("Tury", great)
 
+	//Clousers
+	nextInt := incrementerClouser()
+	fmt.Println("Clousers =>", nextInt())
 }
 
 // Functios variadica -----------------------
@@ -58,4 +61,14 @@ var sayHello = func(name string) {
 // le pasamos una funcion como parametro, asi como callbacks en js
 func greetings(name string, f func(string)) {
 	f(name)
+}
+
+// Clousers -----------------
+// retona una fn que retorna un entero
+func incrementerClouser() func() int {
+	i := 12
+	return func() int {
+		i = i + 20
+		return i
+	}
 }
