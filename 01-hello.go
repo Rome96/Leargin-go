@@ -17,5 +17,6 @@ func main() {
 	//contacts()
 	//StructAndMethod()
 	//Concurrencia()
-	Functions()
+	// Functions()
+	Generics()
 }
