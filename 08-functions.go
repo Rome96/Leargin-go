@@ -2,6 +2,27 @@ package main
 
 import "fmt"
 
+func Functions() {
+	fmt.Println(sum("pepito", 2, 3))
+	returnData("Hola", 42, true, 3.14)
+
+	//recursive
+	fmt.Println("Recursive function ->", factorial(5))
+
+	//anonymous function
+	func() {
+		fmt.Println("Anonymous function")
+	}()
+
+	sayHello("Tury")
+
+	great := func(name string) {
+		fmt.Println("Hola", name, "Como estas?")
+	}
+	greetings("Tury", great)
+
+}
+
 // Functios variadica -----------------------
 // cons ...tipo - se le dice que reciba n cantidad de parametros y su tipo
 func sum(name string, nums ...int) int {
@@ -29,10 +50,12 @@ func factorial(n int) int {
 	return n * factorial(n-1)
 }
 
-func Functions() {
-	fmt.Println(sum("pepito", 2, 3))
-	returnData("Hola", 42, true, 3.14)
+// Anonymous functions -----------------
+var sayHello = func(name string) {
+	fmt.Println("Anonymous function  say hello", name)
+}
 
-	//recursive
-	fmt.Println("Recursive function ->", factorial(5))
+// le pasamos una funcion como parametro, asi como callbacks en js
+func greetings(name string, f func(string)) {
+	f(name)
 }
